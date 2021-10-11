@@ -1,0 +1,36 @@
+mat-nav-list{
+    padding-top: 0;
+}
+.logo {
+    display: flex;
+    text-align: center;
+    padding: 2.6rem 1rem;
+    img{
+        height: 50px;
+    }
+    .slogan {
+        font-family: 'Mina';
+        color: #FFFFFF;
+        font-weight: lighter;
+        font-size: 26px;
+        padding: 0 10px;
+        margin-top: 0px;
+    }
+}
+.mat-divider {
+    border-top-width: 1px;
+    border-color:  #e7eef1;
+}
+.mat-icon{
+    vertical-align:center ;
+    margin-right: 1rem;
+}
+
+.mat-list-item {
+    color: #FFFFFF !important;
+    font-size: 0.8rem;
+    height: 44px !important;
+    margin-bottom: 4px;
+
+}
+  

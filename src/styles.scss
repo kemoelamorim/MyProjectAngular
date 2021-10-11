@@ -1,4 +1,18 @@
+@import 'themes';
+
+@import '~@nebular/theme/styles/globals';
+
+@include nb-install() {
+  @include nb-theme-global();
+};
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import url('https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap');
+.red{
+    color:rgb(227, 94,107)
+}
+.v-middle{
+    vertical-align: middle;
+}

@@ -1,0 +1,14 @@
+mat-toolbar {
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #ffffff;
+    height: 6.5rem;
+    padding: 0 50px;;
+}
+mat-toolbar h1{
+    font-family: 'Mina';
+    font-size: 28px;
+    font-weight: 600;
+}
