@@ -1,0 +1,91 @@
+.content {
+  padding: 30px 50px;
+  background-color: #e7eef1;
+
+}
+.content h2{
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.texto-aux p{
+  margin-bottom: 0;
+  font-weight: lighter;
+  font-size: 13px;
+}
+form{
+  padding-top: 15px;
+  label{
+    font-size: 12px;
+    color: rgb(48, 48, 48);
+    font-weight: bold;
+    font-family: 'Open Sans';
+  }
+
+}
+form .group-busca{
+  display: flex;
+}
+form .group-busca input{
+  width: 280px;
+  margin-right: 16px;
+  padding: 6px;
+}
+form .button-input{
+  background-color:  #165c7d;
+  color: #ffffff;
+  border-color:  #165c7d;
+  width: 200px;
+  &:hover{
+      opacity: 60%;
+  }
+}
+.hover{
+  opacity: 60%;
+}
+
+.cards{
+  padding-top: 35px;
+  display: flex;
+}
+.cards > mat-card{
+  width: 280px;
+  height: 180px;
+  margin-right: 16px;
+}
+mat-card{
+  padding: 20px 30px;
+}
+
+mat-card h4{
+
+  font-weight: bolder;
+  margin-bottom: 0px;
+  font-size: 14px;
+  padding-bottom: 0px;
+  height: 18px;
+}
+mat-card p, label{
+  color: #918f8f;
+  font-size: 11px;
+  height: 18px;
+}
+mat-card .group-info{
+  display: flex;
+  margin-top: 15px
+}
+mat-card .group-info mat-icon{
+  margin-right: 20px;
+  margin-top: 10px;
+  color: #918f8f;
+
+}
+mat-card .group-info .check{
+  color: chartreuse;
+}
+mat-card .group-info .not-check{
+  color: rgb(228, 29, 3);
+}
+mat-card #contas h4{
+  text-transform: capitalize;
+}

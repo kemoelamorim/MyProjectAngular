@@ -9,10 +9,10 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-@import url('https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Mina:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 .red{
-    color:rgb(227, 94,107)
-}
-.v-middle{
-    vertical-align: middle;
+  color: red;
 }

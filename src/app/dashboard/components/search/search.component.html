@@ -1,0 +1,62 @@
+<div class="content">
+  <h2>Informe o CPF do futuro Cooperado (a)</h2>
+  <div class="texto-aux">
+      <p>Se necessário, você poderá duplicar uma conta existente ou pausar e retornar este cadastro futuramente.</p>
+      <p>Digite apenas os números (sem pontos ou traços).</p>
+  </div>
+  <div>
+      <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+          <label for="cpf">CPF</label>
+          <div class="group-busca">
+              <input class="form-control" id="cpf" placeholder="000.000.000-00" name="cpf"  mask="000.000.000-00" required ngModel #cpf="ngModel" [class.is-invalid]="!cpf.valid && cpf.touched" [class.is-valid]="cpf.valid && cpf.dirty">
+              <button class="button-input" [class.hover]="!f.valid" type="submit" [disabled]="!f.valid"> Consulta por CPF </button>
+          </div>
+          <div *ngIf="!cpf.valid && cpf.touched" class="red mt-1">
+            CPF Inválido!
+          </div>
+      </form>
+  </div>
+  <div  class="cards" *ngIf='pessoa && cpf.valid'>
+    <mat-card>
+      <h4>SITUAÇÃO CADASTRAL DO CPF</h4>
+      <p>Consulta na Receita Federal</p>
+      <div>
+          <div class="group-info">
+              <mat-icon>person</mat-icon>
+              <div class="row">
+                  <label for="nome">Nome </label>
+                  <span id="nome">{{cooperado$.info.nomeCompleto}}</span>
+              </div>
+          </div>
+          <div class="group-info">
+              <span *ngIf="cooperado$.info.situacao === 'REGULAR'">
+
+                  <mat-icon class="check">check_circle_outline</mat-icon>
+              </span>
+              <span *ngIf="cooperado$.info.situacao === 'IRREGULAR'">
+
+                  <mat-icon class="not-check">cancel</mat-icon>
+              </span>
+              <div class="row">
+                  <label for="nome">SITUAÇÃO do CPF </label>
+                  <span id="nome">{{cooperado$.info.situacao}}</span>
+              </div>
+          </div>
+      </div>
+    </mat-card>
+    <mat-card id="contas" *ngFor ="let conta of cooperado$.contas" >
+      <h4>CONTA {{conta.tipo}} </h4>
+      <p>{{conta.instituicao}}</p>
+      <div>
+          <div class="group-info">
+              <mat-icon>payment</mat-icon>
+              <div class="row">
+                  <label for="cartao">Cartão</label>
+                  <span id="cartao">{{conta.numero}}</span>
+              </div>
+          </div>
+      </div>
+    </mat-card>
+  </div>
+  <div *ngIf='error' class="red mt-1">CPF Não encontrado!</div>
+</div>

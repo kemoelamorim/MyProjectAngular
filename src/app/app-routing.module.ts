@@ -1,10 +1,11 @@
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './components/template/home/home.component';
+
 
 const routes: Routes = [
-  {path:'', redirectTo:'home', pathMatch:'full' },
-  {path:'home', component:HomeComponent}
+  {path:'', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) },
+  {path:'**', redirectTo:'', pathMatch:'full'}
 ];
 
 @NgModule({

@@ -1,0 +1,69 @@
+<mat-nav-list>
+  <div class="logo">
+      <img src="../../../../assets/img/logo.png" alt="logo">
+      <h2><span *ngIf = 'isExpanded'>Central Ailos</span></h2>
+  </div>
+
+  <div class="group-menu">
+    <mat-list-item (click) = "isExpanded = !isExpanded" routerLinkActive="list-item-active">
+      <div class="group-item">
+        <mat-icon >
+          menu
+        </mat-icon>
+        <span *ngIf = 'isExpanded'>Menu</span>
+      </div>
+    </mat-list-item>
+
+    <mat-list-item [routerLink]="'search'">
+      <div class="group-item">
+        <mat-icon>
+          search</mat-icon>
+          <span *ngIf = 'isExpanded'>
+            Pesquisa
+        </span>
+      </div>
+    </mat-list-item>
+
+    <mat-list-item>
+      <div class="group-item">
+        <mat-icon>
+          star_border
+        </mat-icon>
+        <span *ngIf = 'isExpanded'>
+            Favoritos
+        </span>
+      </div>
+    </mat-list-item>
+
+    <mat-list-item >
+      <div class="group-item">
+        <mat-icon>
+          textsms</mat-icon>
+          <span *ngIf = 'isExpanded'>
+            Mensagens
+        </span>
+      </div>
+    </mat-list-item>
+
+    <mat-list-item>
+      <div class="group-item">
+        <mat-icon>
+          tune</mat-icon>
+          <span *ngIf = 'isExpanded'>
+            Opções
+        </span>
+      </div>
+    </mat-list-item>
+
+    <mat-list-item >
+      <div class="group-item">
+        <mat-icon>
+          account_balance</mat-icon>
+        <span *ngIf='isExpanded'>Central Ailos</span>
+      </div>
+    </mat-list-item>
+
+  </div>
+</mat-nav-list>
+
+
