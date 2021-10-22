@@ -7,7 +7,7 @@ Required:
 Para caregar os dados do projeto precisa carregar o json-server
 - Abra o terminal e execute o comando:
     - npm install json-server
-- O diretorio do front-end\src\assets\data:
+- O diretorio do src\assets\data:
   - execute o comando:
       - npx json-server --watch db.json
 
