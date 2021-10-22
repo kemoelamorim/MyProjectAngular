@@ -16,7 +16,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NgxMaskModule } from 'ngx-mask';
 import { FormsModule } from '@angular/forms';
-import { CardsComponent } from './components/cards/cards.component';
+
 
 
 
@@ -27,8 +27,6 @@ import { CardsComponent } from './components/cards/cards.component';
     FooterComponent,
     NavComponent,
     SearchComponent,
-    CardsComponent,
-
   ],
   imports: [
     CommonModule,

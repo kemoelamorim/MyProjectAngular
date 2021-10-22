@@ -8,15 +8,15 @@
       <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
           <label for="cpf">CPF</label>
           <div class="group-busca">
-              <input class="form-control" id="cpf" placeholder="000.000.000-00" name="cpf"  mask="000.000.000-00" required ngModel #cpf="ngModel" [class.is-invalid]="!cpf.valid && cpf.touched" [class.is-valid]="cpf.valid && cpf.dirty">
+              <input class="form-control" id="cpf" placeholder="000.000.000-00" name="cpf" (keyup)="unSubscraeb()" mask="000.000.000-00" required ngModel #cpf="ngModel" [class.is-invalid]="!cpf.valid && cpf.touched" [class.is-valid]="cpf.valid && cpf.dirty">
               <button class="button-input" [class.hover]="!f.valid" type="submit" [disabled]="!f.valid"> Consulta por CPF </button>
           </div>
-          <div *ngIf="!cpf.valid && cpf.touched" class="red mt-1">
+          <div *ngIf="!cpf.valid && cpf.touched && !error" class="red mt-1">
             CPF Inválido!
           </div>
       </form>
   </div>
-  <div  class="cards" *ngIf='pessoa && cpf.valid'>
+  <div  class="cards" *ngIf='pessoa && cpf.valid && !error'>
     <mat-card>
       <h4>SITUAÇÃO CADASTRAL DO CPF</h4>
       <p>Consulta na Receita Federal</p>

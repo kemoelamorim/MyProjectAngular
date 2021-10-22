@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
 import { Pessoa } from '../../models/pessoa/pessoa';
 import { PessoaService } from '../../service/pessoa.service';
 
-import { CardsComponent } from '../cards/cards.component';
 
 @Component({
   selector: 'app-search',
@@ -16,9 +15,10 @@ import { CardsComponent } from '../cards/cards.component';
 export class SearchComponent implements OnInit {
 
   constructor(private pessoaService: PessoaService) { }
-  cooperado$!: Pessoa;
+  cooperado$!: Pessoa ;
   pessoa!:Pessoa;
   error: boolean = false;
+  registro!:Pessoa;
 
   ngOnInit(): void {
   }
@@ -29,11 +29,18 @@ export class SearchComponent implements OnInit {
         this.error = true
       }else{
         this.cooperado$ = this.pessoa
+
         this.error = false
       };
     })
   }
   mostraCards(pessoa:Pessoa):void{
     this.cooperado$ = pessoa
+  }
+  ngOnDestroy() {
+
+  }
+  unSubscraeb():void{
+    this.error = true
   }
 }
