@@ -1,4 +1,15 @@
 # Myproject
+Required:
+- precisa intalar o gerenciador de pacotes que vem no node(npm)
+- npm install @angular/cli@12.2.7
+- No diretorio do Projeto executar o comando:
+    - npx ng serve
+Para caregar os dados do projeto precisa carregar o json-server
+- Abra o terminal e execute o comando:
+    - npm install json-server
+- O diretorio do front-end\src\assets\data:
+  - execute o comando:
+      - npx json-server --watch db.json
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
 

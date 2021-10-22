@@ -11,8 +11,8 @@
               <input class="form-control" id="cpf" placeholder="000.000.000-00" name="cpf" (keyup)="unSubscraeb()" mask="000.000.000-00" required ngModel #cpf="ngModel" [class.is-invalid]="!cpf.valid && cpf.touched" [class.is-valid]="cpf.valid && cpf.dirty">
               <button class="button-input" [class.hover]="!f.valid" type="submit" [disabled]="!f.valid"> Consulta por CPF </button>
           </div>
-          <div *ngIf="!cpf.valid && cpf.touched && !error" class="red mt-1">
-            CPF Inválido!
+          <div *ngIf="!pessoa" class="red mt-1">
+            CPF nâo encontrado!
           </div>
       </form>
   </div>
@@ -58,5 +58,5 @@
       </div>
     </mat-card>
   </div>
-  <div *ngIf='error' class="red mt-1">CPF Não encontrado!</div>
+  <div *ngIf='error && !cpf.valid' class="red mt-1">CPF Inválido!</div>
 </div>
